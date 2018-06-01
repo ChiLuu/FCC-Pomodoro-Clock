@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Pomodoro Clock</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <link href="https://fonts.googleapis.com/css?family=Archivo" rel="stylesheet"> 
+    <link href='http://fonts.googleapis.com/css?family=Cookie' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"/>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.js"></script>
+    <script src="pomodoro.js"></script>
+</head>
+<body>
+
+    <div class="banner">
+        <h1>Pomodoro Clock</h1>
+    </div>
+
+    <div class="container">
+        <div class="row selectorArea">
+            <div class="col-sm-3"></div>
+            <div class="col-sm-3 session">
+                <h4>SESSION</h4>
+            </br>
+                <div class="sessionSelector d-inline-flex">
+                    <button class="btn btn-primary subtractSession">-</button><h4 class="sessionTimer"></h4><h4>mins</h4>
+                    <button class="btn btn-primary addSession">+</button>
+                </div>
+            </div>
+            
+            
+            <div class="col-sm-3 break">
+                <h4>BREAK</h4>
+            </br>
+                <div class="breakSelector d-inline-flex">
+                    <button class="btn btn-primary subtractBreak">-</button><h4 class="breakTimer"></h4><h4>mins</h4>
+                    <button class="btn btn-primary addBreak">+</button>
+                </div>
+            </div>
+            
+            <div class="col-sm-3"></div>
+        </div>
+        <button class="start">START</button>
+
+        <div class="sessionCountDownTimer">
+                <div><h4>Time Left in Session:</h4></div>
+                <div class="sessionCounter"></div>
+        </div>
+
+        <div class="breakCountDownTimer">
+                <div class="breakHeader"><h4>Time Left in Break:</h4></div>
+                <div class="breakCounter"></div>
+        </div>
+
+        <div class="clock">
+            
+            <div class="binary-display">
+                <ul class="minsTens">
+                    <li class="hide"></li>
+                    <li class="minsTensFour"></li>
+                    <li class="minsTensTwo"></li>
+                    <li class="minsTensOne"></li>
+                </ul>
+                <ul class="minsOnes">
+                    <li class="minsOnesEight"></li>
+                    <li class="minsOnesFour"></li>
+                    <li class="minsOnesTwo"></li>
+                    <li class="minsOnesOne"></li>
+                </ul>
+                <ul class="secondsTens">
+                    <li class="hide"></li>
+                    <li class="secondsTensFour"></li>
+                    <li class="secondsTensTwo"></li>
+                    <li class="secondsTensOne"></li>
+                </ul>
+                <ul class="secondsOnes">
+                    <li class="secondsOnesEight"></li>
+                    <li class="secondsOnesFour"></li>
+                    <li class="secondsOnesTwo"></li>
+                    <li class="secondsOnesOne"></li>
+                </ul>
+            </div>
+            <div class="footer">
+                01000011 01101000 01101001
+            </div>
+            <div class="timeLabel"><b class="minutesM">M</b>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<b class="secondsS">S</b></div>
+        </div>
+
+        <button class="reset">Reset</button>
+        <button class="pause">Pause</button>
+
+        <div class="alertMessage"></div>
+    </div>
+
+
+        
+</body>
+</html>
